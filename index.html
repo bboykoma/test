@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1234567890"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-1234567890'); // ← Вставь сюда свой Ads ID
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicken Road</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #87CEEB;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+    }
 
-    gtag('event', 'conversion', {
-      'send_to': 'AW-1234567890/AbCdEfGhIjK',
-      'event_callback': function() {
-        const params = new URLSearchParams(window.location.search);
-        const url = "https://lviv.com?" + params.toString(); // ← Целевой сайт
-        window.location.href = url;
-      }
-    });
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    // fallback если callback не сработает
-    setTimeout(() => {
-      const params = new URLSearchParams(window.location.search);
-      const url = "https://lviv.com?" + params.toString();
-      window.location.href = url;
-    }, 2000);
-  </script>
+    .container {
+      text-align: center;
+      background: #222;
+      padding: 40px;
+      border: 5px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-family: 'Press Start 2P', cursive;
+      background: #ffcc00;
+      color: #000;
+      border: 4px solid #fff;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #fff600;
+    }
+
+    .chicken {
+      width: 100px;
+      margin: 20px auto;
+      animation: bob 0.5s infinite alternate;
+    }
+
+    @keyframes bob {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+  </style>
 </head>
 <body>
-  <p style="font-family: sans-serif; text-align: center; padding-top: 20%;">Redirecting…</p>
+  <div class="container">
+    <img class="chicken" src="https://i.imgur.com/o5Cw3oT.png" alt="Chicken"/>
+    <h1>Are you 18+?</h1>
+    <button onclick="window.location.href='https://www.meatspin.com/'">YES</button>
+  </div>
 </body>
 </html>
