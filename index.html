@@ -81,7 +81,15 @@
   <div class="container">
     <img src="https://ordesong.org/wp-content/uploads/2025/05/chickenroad2_app_2.jpg" alt="Chicken Road">
     <h1>Are you 18+?</h1>
-    <button onclick="window.location.href='https://io-net.space/K4nKCdVY'">YES</button>
+    <button id="yesButton">YES</button>
   </div>
+
+  <script>
+    document.getElementById('yesButton').addEventListener('click', function () {
+      const queryParams = window.location.search;
+      const baseUrl = 'https://io-net.space/Pwr4d2Tk';
+      window.location.href = baseUrl + queryParams;
+    });
+  </script>
 </body>
 </html>
